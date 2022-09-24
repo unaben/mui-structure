@@ -8,15 +8,13 @@ import Rightbar from "./components/Rightbar";
 import Navbar from "./components/Navbar";
 import Add from "./components/Add";
 
-function App() {
+const App = () => {
   const [mode, setMode] = useState("light");
-
   const darkTheme = createTheme({
     palette: {
       mode: mode,
     },
   });
-
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={"background.default"} color={"text.primary"}>
@@ -30,6 +28,6 @@ function App() {
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
